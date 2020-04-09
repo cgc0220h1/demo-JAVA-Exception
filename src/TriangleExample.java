@@ -2,9 +2,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TriangleExample {
-    public static void main(String[] args) throws IllegalTriangleException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter triangle sides!");
+
         try {
             System.out.print("Enter side 1: ");
             double side1 = scanner.nextDouble();
@@ -13,6 +14,7 @@ public class TriangleExample {
             System.out.print("Enter side 3: ");
             double side3 = scanner.nextDouble();
             Triangle triangle = new Triangle(side1,side2,side3);
+            System.out.println(triangle);
         } catch (InputMismatchException exception) {
             System.out.println("Wrong type input!");
             System.out.println("Cause: " + exception.getMessage());
